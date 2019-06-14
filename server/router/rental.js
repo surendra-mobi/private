@@ -1,6 +1,6 @@
 const express=require("express");
 const Rental= require("../models/Rental");
-const userCtrl= require("../controllers/User");
+const userCtrl= require("../controllers/user");
 
 const router=express.Router();
 router.get('/secrate',userCtrl.authUser,function(req, res){
