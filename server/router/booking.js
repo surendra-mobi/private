@@ -1,6 +1,6 @@
 const express=require("express");
 const Booking= require("../models/Booking");
-const BookingCtrl=require("../controllers/Booking");
+const BookingCtrl=require("../controllers/booking");
 const UserCtrl= require("../controllers/user");
 
 const router=express.Router();
