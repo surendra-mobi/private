@@ -6,7 +6,11 @@
      />
   <div class="form-group">
     <label for="guests">Guests</label>
-    <input type="number" class="form-control" id="guests" aria-describedby="emailHelp" placeholder="">
+    <input type="number"
+    [(ngModel)]="newBooking.guests" 
+    class="form-control" 
+    id="guests" 
+    aria-describedby="emailHelp" >
   </div>
   <button class="btn btn-danger btn-confirm btn-block">Reserve place now</button>
   <hr>

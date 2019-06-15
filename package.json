@@ -3,8 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "concurrently \"node server/index.js\" \"ng serve --proxy-config proxy.conf.json \"",
-    "build": "ng build",
+    "start": "npm run start --prefix server",
+    "start-dev": "ng serve",
+    "build": "ng build --prod",
+    "heroku-postbuild": "npm run build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -36,7 +38,7 @@
     "ng2-daterangepicker": "^2.0.12",
     "ngx-pipes": "^2.5.0",
     "rxjs": "~6.3.3",
-    "rxjs-compat": "^6.3.3",
+    "rxjs-compat": "6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
   },
