@@ -1,8 +1,8 @@
 const express= require("express");
-var PORT=process.env.port|| 3001;
 const bodyParser=require("body-parser");
 const Rental= require("./models/Rental");
 const FakeDB= require("./models/fake_db");
+const path = require('path');
 
 const rentalRouter= require("./router/rental"), userRouter= require("./router/users"), bookingRouter= require("./router/booking");
 
@@ -19,14 +19,14 @@ app.use('/api/v1/users',userRouter);
 app.use('/api/v1/bookings',bookingRouter);
 
 
-if (process.env.NODE_ENV === 'production') {
+//if (process.env.NODE_ENV === 'production') {
   const appPath = path.join(__dirname, '..', 'dist');
   app.use(express.static(appPath));
 
   app.get('*', function(req, res) {
     res.sendFile(path.resolve(appPath, 'index.html'));
   });
-}
+//}
 
 const PORT = process.env.PORT || 3001;
 
