@@ -27,7 +27,7 @@
     "@angular/router": "~7.1.0",
     "@auth0/angular-jwt": "^2.1.0",
     "@types/jquery": "^3.3.29",
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.0",
     "bootstrap": "^4.1.0",
     "concurrently": "^4.1.0",
     "core-js": "^2.5.4",
